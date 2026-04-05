@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+    color: #333;
+}
+
+/* Header & Nav */
+header {
+    background: #020101;
+    color: white;
+    padding: 10px 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.mini-logo img {
+    height: 40px;
+}
+
+nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+nav a.active {
+    color: #ff4d00;
+    border-bottom: 2px solid #ff4d00;
+}
+
+.user-account {
+    background: #020101;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(to bottom, #040202, #040202);
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid white;
+}
+
+.main-logo img {
+    max-width: 400px;
+    filter: drop-shadow(0 0 20px #060303(255, 69, 0, 0.5));
+}
+
+/* Main Content */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 800;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+/* Cards */
+.status-card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.status-info {
+    display: flex;
+    gap: 15px;
+}
+
+.status-lunas {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.badge {
+    background: #f1c40f;
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.history-link {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Payment Options */
+.payment-options {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.option-card {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.option-card.active {
+    background: #222;
+    color: white;
+}
+
+.btn-select {
+    margin-top: 15px;
+    width: 100%;
+    background: none;
+    border: 1px solid #ff4d00;
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-continue {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    margin-top: 25px;
+}
+
+/* Right Column Summary */
+.summary-box {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.qr-box {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+}
+
+.qr-box img {
+    width: 150px;
+}
+
+/* Action Button */
+.action-center {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btn-pay-now {
+    background: linear-gradient(to bottom, #999, #444);
+    color: white;
+    padding: 15px 60px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background: #040202;
+    color: #666;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.footer-logo img {
+    height: 50px;
+    opacity: 0.7;
+}
+
+.socials i {
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
