@@ -1,3 +1,4 @@
+/* RESET & DASAR */
 * {
     margin: 0;
     padding: 0;
@@ -6,121 +7,129 @@
 }
 
 body {
-    background-color: #ffffff;
-    color: #333;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
 }
 
-/* Header & Nav */
+/* HEADER & NAVIGASI */
 header {
-    background: #020101;
-    color: white;
+    background: #111;
     padding: 10px 0;
+    border-bottom: 1px solid #333;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap; 
     justify-content: space-between;
-    padding: 0 20px;
+    align-items: center;
+    padding: 0 15px;
 }
 
+/* --- PERBAIKAN LOGO: Header (Kecil) --- */
 .mini-logo img {
-    height: 40px;
+    height: 35px; /* Atur tinggi agar sejajar dengan menu */
+    width: auto;   /* Lebar otomatis menyesuaikan */
+    display: block;
 }
 
-nav a {
-    color: #ccc;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 14px;
-}
-
-nav a.active {
-    color: #ff4d00;
-    border-bottom: 2px solid #ff4d00;
-}
-
-.user-account {
-    background: #020101;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 13px;
-    cursor: pointer;
-}
-
-/* Hero Section */
-.hero {
-    background: linear-gradient(to bottom, #040202, #040202);
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 5px solid white;
-}
-
-.main-logo img {
-    max-width: 400px;
-    filter: drop-shadow(0 0 20px #060303(255, 69, 0, 0.5));
-}
-
-/* Main Content */
-.container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-h1 {
-    text-align: center;
-    font-weight: 800;
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-}
-
-.grid-layout {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 30px;
-}
-
-/* Cards */
-.status-card {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
-}
-
-.status-info {
+nav {
     display: flex;
     gap: 15px;
 }
 
-.status-lunas {
-    color: #2ecc71;
-    font-weight: bold;
+nav a {
+    color: #888;
+    text-decoration: none;
     font-size: 14px;
 }
 
+nav a.active {
+    color: #ff4500;
+}
+
+/* --- PERBAIKAN LOGO: Logo Utama/Danyang Big (Menengah di HP) --- */
+.hero {
+    text-align: center;
+    padding: 20px 15px; /* Padding samping agar tidak mepet */
+}
+
+.main-logo img {
+    max-width: 80%; /* Di HP, logo akan mengambil maks 80% lebar layar */
+    width: 350px;    /* Ini batas maksimal di desktop agar tidak kebesaran */
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Tengah-tengah */
+}
+
+/* CONTAINER UTAMA & GRID LAYOUT (Sudah Responsif) */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.grid-layout {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 30px;
+}
+
+.left-col {
+    flex: 2 1 400px;
+    width: 100%;
+}
+
+.right-col {
+    flex: 1 1 300px;
+    width: 100%;
+}
+
+/* BOX STYLING (Sudah Responsif) */
+.welcome-box, .status-card, .summary-box, .qr-box, .option-card {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #333;
+}
+
+.status-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.status-lunas {
+    color: #4caf50;
+    font-weight: bold;
+}
+
 .badge {
-    background: #f1c40f;
-    font-size: 10px;
+    background: #ffc107;
+    color: #000;
     padding: 2px 8px;
+    font-size: 10px;
     border-radius: 4px;
     font-weight: bold;
 }
 
 .history-link {
-    font-size: 12px;
-    color: #666;
+    color: #888;
+    font-size: 13px;
+    text-decoration: underline;
 }
 
-/* Payment Options */
 .payment-options {
     display: flex;
     gap: 15px;
@@ -129,51 +138,18 @@ h1 {
 
 .option-card {
     flex: 1;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
     text-align: center;
 }
 
 .option-card.active {
-    background: #222;
-    color: white;
-}
-
-.btn-select {
-    margin-top: 15px;
-    width: 100%;
-    background: none;
-    border: 1px solid #ff4d00;
-    color: white;
-    padding: 8px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.btn-continue {
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 8px;
-    width: 100%;
-    margin-top: 25px;
-}
-
-/* Right Column Summary */
-.summary-box {
-    background: #f9f9f9;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border: 2px solid #ff4500;
 }
 
 .summary-item {
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
     margin: 10px 0;
+    font-size: 14px;
 }
 
 .summary-total {
@@ -181,61 +157,103 @@ h1 {
     justify-content: space-between;
     font-weight: bold;
     font-size: 18px;
+    margin-top: 10px;
 }
 
-.qr-box {
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-}
-
+/* QRIS IMAGE (Sudah Responsif) */
 .qr-box img {
-    width: 150px;
+    width: 100%;
+    max-width: 200px; /* Sedikit lebih kecil agar rapi */
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
 }
 
-/* Action Button */
-.action-center {
-    text-align: center;
-    margin-top: 40px;
+/* BUTTONS */
+.btn-select, .btn-pay-now {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-select {
+    background: #333;
+    color: white;
 }
 
 .btn-pay-now {
-    background: linear-gradient(to bottom, #999, #444);
-    color: white;
-    padding: 15px 60px;
-    border-radius: 10px;
-    border: 1px solid #222;
-    font-weight: bold;
-    font-size: 18px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    cursor: pointer;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    margin-top: 20px;
 }
 
-/* Footer */
+/* --- PERBAIKAN LOGO: Footer (Tengah-Bawah) --- */
 footer {
-    background: #040202;
-    color: #666;
-    padding: 40px 0;
+    background: #111;
+    padding: 40px 15px;
     margin-top: 50px;
+    border-top: 1px solid #333;
+    text-align: center; /* Konten footer rata tengah di HP */
 }
 
 .footer-content {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center; /* Tengah secara flex */
     align-items: center;
-    padding: 0 20px;
+    gap: 30px; /* Jarak antar elemen footer */
+}
+
+.contact, .socials {
+    flex: 1 1 250px; /* Biar bisa turun ke bawah di HP */
+}
+
+.footer-logo {
+    flex: 1 1 100%; /* Logo footer mengambil satu baris sendiri di HP */
+    display: flex;
+    justify-content: center;
 }
 
 .footer-logo img {
-    height: 50px;
-    opacity: 0.7;
+    width: 180px; /* ATUR UKURAN LOGO BAWAH DI SINI */
+    height: auto;
+    display: block;
 }
 
 .socials i {
-    font-size: 20px;
-    margin-left: 15px;
-    cursor: pointer;
+    font-size: 22px;
+    margin: 0 10px; /* Jarak antar ikon sosial media */
+    color: #888;
+}
+
+/* RESPONSIVE UNTUK HP KECIL */
+@media (max-width: 600px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .payment-options {
+        flex-direction: column;
+    }
+    
+    h1 {
+        font-size: 20px;
+    }
+
+    /* Penyesuaian khusus footer di HP */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .socials i {
+        margin: 10px;
+    }
 }
